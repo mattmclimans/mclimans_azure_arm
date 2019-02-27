@@ -1,7 +1,7 @@
 ## 2 x VM-Series (3 NIC)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/standard_deployments/images/2fw_3nic_avset.png">
+<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/standard_deployments/v1/images/2fw_3nic_avset.png">
 </p>
 
 ### Overview

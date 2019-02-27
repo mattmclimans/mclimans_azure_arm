@@ -1,7 +1,7 @@
 ## 2 x VM-Series (3 NIC) with Public & Internal Load Balancers (Standard SKU)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/v1.0/standard_deployments/images/2fw_3nic_avset_intlb_extlb.png">
+<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/standard_deployments/v1/images/2fw_3nic_avset_intlb_extlb.png">
 </p>
 
 ### Overview
