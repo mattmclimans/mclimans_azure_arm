@@ -1,10 +1,19 @@
 #! /bin/bash
 dbip="10.5.4.5"
 FW_NIC2="10.5.2.4"
-sudo apt-get update
-sudo apt-get install -y apache2 wordpress
-sudo ln -sf /usr/share/wordpress /var/www/html/wordpress
-sudo gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
+while true
+    do 
+        resp=$(curl -s -S -g -k "https://$FW_NIC2/api/?type=op&cmd=<show><chassis-ready></chassis-ready></show>&key=LUFRPT1CU0dMRHIrOWFET0JUNzNaTmRoYmkwdjBkWWM9alUvUjBFTTNEQm93Vmx0OVhFRlNkOXdJNmVwYWk5Zmw4bEs3NjgwMkh5QT0=")
+	echo $resp
+        if [[ $resp == *"[CDATA[yes"* ]] ; then
+            break
+        fi
+        sleep 10s
+    done
+apt-get update
+apt-get install -y apache2 wordpress
+ln -sf /usr/share/wordpress /var/www/html/wordpress
+gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
 while true; do
   resp=$(mysql -udemouser -ppaloalto@123 -h "$dbip" -e 'show databases')
   echo "$resp"
