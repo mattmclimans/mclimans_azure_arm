@@ -1,4 +1,3 @@
-sudo exec > >(sudo tee /var/log/user-data.log|logger -t user-data -s 2> sudo /dev/console) 2>&1
 sudo apt-get update
 sudo apt-get -y install debconf-utils 
 sudo DEBIAN_FRONTEND=noninteractive | apt-get install -y mysql-server 
