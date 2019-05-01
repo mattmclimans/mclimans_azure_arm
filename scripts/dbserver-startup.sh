@@ -1,3 +1,14 @@
+#! /bin/bash
+FW_NIC3="10.5.2.4"
+while true
+    do 
+        resp=$(curl -s -S -g -k "https://$FW_NIC3/api/?type=op&cmd=<show><chassis-ready></chassis-ready></show>&key=LUFRPT1CU0dMRHIrOWFET0JUNzNaTmRoYmkwdjBkWWM9alUvUjBFTTNEQm93Vmx0OVhFRlNkOXdJNmVwYWk5Zmw4bEs3NjgwMkh5QT0=")
+	echo $resp
+        if [[ $resp == *"[CDATA[yes"* ]] ; then
+            break
+        fi
+        sleep 10s
+    done
 sudo apt-get update
 sudo apt-get -y install debconf-utils 
 sudo DEBIAN_FRONTEND=noninteractive | apt-get install -y mysql-server 
