@@ -1,5 +1,5 @@
 #! /bin/bash
-dbip="10.5.3.5"
+dbip="10.5.4.5"
 FW_NIC2="10.5.2.4"
 sudo apt-get update
 sudo apt-get install -y apache2 wordpress
