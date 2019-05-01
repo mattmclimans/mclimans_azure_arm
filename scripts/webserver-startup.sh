@@ -2,6 +2,19 @@
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 dbip="10.5.3.5"
 FW_NIC2="10.5.2.4"
+apt-get update
+apt-get install -y apache2 wordpress
+ln -sf /usr/share/wordpress /var/www/html/wordpress
+gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
+while true; do
+  resp=$(mysql -udemouser -ppaloalto@123 -h "$dbip" -e 'show databases')
+  echo "$resp"
+  if [[ "$resp" = *"Demo"* ]]
+       then
+            break
+  fi
+ sleep 5s
+done
 bash /usr/share/doc/wordpress/examples/setup-mysql -n Demo -t "$dbip" "$dbip"
 sed -i "s/define('DB_USER'.*/define('DB_USER', 'demouser');/g" /etc/wordpress/config-"$dbip".php
 sed -i "s/define('DB_PASSWORD'.*/define('DB_PASSWORD', 'paloalto@123');/g" /etc/wordpress/config-"$dbip".php
