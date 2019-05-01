@@ -1,5 +1,4 @@
 #! /bin/bash
-exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 dbip="10.5.3.5"
 FW_NIC2="10.5.2.4"
 apt-get update
