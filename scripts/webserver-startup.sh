@@ -3,7 +3,7 @@ dbip="10.5.4.5"
 FW_NIC0="10.5.0.4"
 while true
     do 
-        resp=$(curl -s -S -g -k "https://$FW_NIC2/api/?type=op&cmd=<show><chassis-ready></chassis-ready></show>&key=LUFRPT1CU0dMRHIrOWFET0JUNzNaTmRoYmkwdjBkWWM9alUvUjBFTTNEQm93Vmx0OVhFRlNkOXdJNmVwYWk5Zmw4bEs3NjgwMkh5QT0=")
+        resp=$(curl -s -S -g -k "https://$FW_NIC0/api/?type=op&cmd=<show><chassis-ready></chassis-ready></show>&key=LUFRPT1CU0dMRHIrOWFET0JUNzNaTmRoYmkwdjBkWWM9alUvUjBFTTNEQm93Vmx0OVhFRlNkOXdJNmVwYWk5Zmw4bEs3NjgwMkh5QT0=")
 	echo $resp
         if [[ $resp == *"[CDATA[yes"* ]] ; then
             break
