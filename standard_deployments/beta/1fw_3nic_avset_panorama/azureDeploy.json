@@ -363,7 +363,7 @@
       "panorama_interface0_name": "[take(replace(concat(parameters('Panorama-Name'), '-nic0', variables('global_var_appendedString')), ' ', ''), 80)]",
       "panorama_interface0_ip": "[parameters('Panorama-IP')]",
       "panorama_interface0_pip_name": "[take(replace(concat(parameters('Panorama-Name'), '-nic0-pip', variables('global_var_appendedString')), ' ', ''), 80)]",
-      "panorama_interface0_pip_id": { "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('panorama_interface0_pip_name'))]" },
+      "panorama_interface0_pip_id": { "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('panorama_interface0_pip_name'))]" }
 
     },
     "resources": [
