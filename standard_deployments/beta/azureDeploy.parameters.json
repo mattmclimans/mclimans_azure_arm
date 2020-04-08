@@ -1,0 +1,108 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vnetOption": {
+        "value": "Create new VNET"
+      },
+      "vnetResourceGroup": {
+        "value": ""
+      },
+      "vnetName": {
+        "value": "vmseries-vnet"
+      },
+      "vnetPrefix": {
+        "value": "172.31.0.0/16"
+      },
+      "subnetName-Management": {
+        "value": "mgmt-subnet"
+      },
+      "subnetName-Dataplane1": {
+        "value": "untrust-subnet"
+      },
+      "subnetName-Dataplane2": {
+        "value": "trust-subnet"
+      },
+      "subnetPrefix-Management": {
+        "value": "172.31.0.0/24"
+      },
+      "subnetPrefix-Dataplane1": {
+        "value": "172.31.1.0/24"
+      },
+      "subnetPrefix-Dataplane2": {
+        "value": "172.31.2.0/24"
+      },
+      "fW1-Name": {
+        "value": "vmseries-fw-vm1"
+      },
+      "fW1-IPManagement": {
+        "value": "172.31.0.4"
+      },
+      "fW1-IPDataplane1": {
+        "value": "172.31.1.4"
+      },
+      "fW1-IPDataplane2": {
+        "value": "172.31.2.4"
+      },
+      "licenseType": {
+        "value": "byol"
+      },
+      "panosVersion": {
+        "value": "latest"
+      },
+      "vmSize": {
+        "value": "Standard_DS3_v2"
+      },
+      "osDiskType": {
+        "value": "Standard_LRS"
+      },
+      "availabilitySetOption": {
+        "value": "Create new availability set"
+      },
+      "availabilitySetName": {
+        "value": "vmseries-fw-as"
+      },
+      "acceleratedNetworking": {
+        "value": "disable"
+      },
+      "applyPublicIPToManagement": {
+        "value": "Yes"
+      },
+      "applyPublicIPToDataplane1": {
+        "value": "Yes"
+      },
+      "nsgName": {
+        "value": "vmseries-nsg"
+      },
+      "nsgSourcePrefix": {
+        "value": "0.0.0.0/0"
+      },
+      "PanoramaName": {
+        "value": "panorama-vm1"
+      },
+      "Panorama-IP": {
+        "value": "172.31.2.5"
+      },
+      "username": {
+        "value": "paloalto"
+      },
+      "password": {
+        "value": "Pal0Alt0@123"
+      },
+      "(opt.) BootstrapStorageAccount": {
+        "value": ""
+      },
+      "(opt.) BootstrapAccessKey": {
+        "value": ""
+      },
+      "(opt.) BootstrapFileShareName": {
+        "value": ""
+      },
+      "(opt.) BootstrapShareDirectory": {
+        "value": ""
+      },
+      "(opt.) AppendStringToResources": {
+        "value": ""
+      }
+    }
+  }
