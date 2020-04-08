@@ -224,7 +224,7 @@
         "type": "string",
         "defaultValue": "0.0.0.0/0",
         "metadata": {
-          "description": "Enter a valid address prefix. This address will be able to access the firewall's management interface over TCP/443 (GUI), and TCP/22 (Terminal)."
+          "description": "Enter a valid address prefix. This address will be able to access the firewall's management interface over TCP443 (GUI), and TCP22 (Terminal)."
         }
       },
       "Panorama-Name": {
