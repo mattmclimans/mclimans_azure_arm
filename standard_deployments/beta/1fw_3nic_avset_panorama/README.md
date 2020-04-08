@@ -1,7 +1,7 @@
 ## 1 x VM-Series (3 NIC) with Panorama in Trust Subnet
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/standard_deployments/beta/images/1fw_3nic_avset.png">
+<img src="https://raw.githubusercontent.com/mattmclimans/mclimans_azure_arm/master/standard_deployments/v1/images/1fw_3nic_avset.png">
 </p>
 
 ### Overview
