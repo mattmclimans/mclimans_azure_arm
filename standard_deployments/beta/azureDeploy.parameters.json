@@ -77,7 +77,7 @@
       "nsgSourcePrefix": {
         "value": "0.0.0.0/0"
       },
-      "PanoramaName": {
+      "Panorama-Name": {
         "value": "panorama-vm1"
       },
       "Panorama-IP": {
